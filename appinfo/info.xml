@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<info>
+	<id>usage_amount</id>
+	<name>Usage Amount</name>
+	<licence>AGPL</licence>
+	<author>imac-web</author>
+	<description>
+	</description>
+	<version>0.0.1</version>
+	<namespace>Usage_Amount</namespace>
+	<dependencies>
+		<owncloud min-version="10.0" max-version="10.0" />
+	</dependencies>
+	<default_enable/>
+
+	<background-jobs>
+		<job>OCA\Usage_Amount\BackgroundJob\UsageJob</job>
+	</background-jobs>
+
+</info>
