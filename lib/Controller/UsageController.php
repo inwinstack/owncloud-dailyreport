@@ -17,7 +17,7 @@ class UsageController extends Controller {
     }
 
     /**
-    - @NoAdminRequired
+    @NoAdminRequired
     */
 
     public function index() {
@@ -25,7 +25,7 @@ class UsageController extends Controller {
         return new DataResponse($data);
     }
     /**
-    - @NoAdminRequired
+    @NoAdminRequired
     - @NoCSRFRequired
     */
     public function exportCSV($type){
@@ -42,7 +42,7 @@ class UsageController extends Controller {
         exit;         
     }
     /**
-    - @NoAdminRequired
+    @NoAdminRequired
     - @NoCSRFRequired
     */
     public function crontest(){
