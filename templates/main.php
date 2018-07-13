@@ -26,6 +26,7 @@
         <table id="history" class="table table-bordered table-sm">
             <thead class="thead-dark">
                 <th scope="col">使用者</th>
+                <th scope="col">E-mail</th>
                 <th scope="col">用量</th>
                 <th scope="col">總使用量</th>
                 <th scope="col">時間</th>

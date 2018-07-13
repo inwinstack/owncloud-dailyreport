@@ -22,9 +22,9 @@ class PageController extends Controller {
 	}
 
 
+    //  - @NoAdminRequired
     /**
-     - @NoCSRFRequired
-     - @NoAdminRequired     
+     - @NoCSRFRequired     
      */
     public function index() {
         // date_default_timezone_set("Asia/Taipei");

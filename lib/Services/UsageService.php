@@ -96,11 +96,11 @@ class UsageService {
     }
     public function getUserUsage($user_id,$type,$webpage=false){
         if ($type == "day"){
-            $sql = "SELECT user_id, user_usage, total, DATE_FORMAT(FROM_UNIXTIME(`created_at`), '%Y-%m-%d') as created_at
-                    FROM *PREFIX*usage_amounts
-                    WHERE user_id = '$user_id'";
+            $sql = "SELECT a.display_name, a.email,m.user_usage, m.total, DATE_FORMAT(FROM_UNIXTIME(`created_at`), '%Y-%m-%d') as created_at
+                    FROM oc_usage_amounts m, oc_accounts a
+                    WHERE m.user_id = '$user_id' AND a.user_id = '$user_id'";
             if ($webpage){
-                $sql = $sql . ' ORDER BY id DESC LIMIT 15';
+                $sql = $sql . ' ORDER BY m.id DESC LIMIT 15';
             }
         }elseif ($type == "month"){
             $sql = "SELECT user_id, sum(user_usage) as user_usage, DATE_FORMAT(FROM_UNIXTIME(`created_at`), '%Y-%m') as created_at
