@@ -98,7 +98,7 @@ class UsageService {
         if ($type == "day"){
             $sql = "SELECT a.display_name, a.email,m.user_usage, m.total, DATE_FORMAT(FROM_UNIXTIME(`created_at`), '%Y-%m-%d') as created_at
                     FROM oc_usage_amounts m, oc_accounts a
-                    WHERE m.user_id = '$user_id' AND a.user_id = '$user_id'";
+                    WHERE m.user_id = a.user_id";
             if ($webpage){
                 $sql = $sql . ' ORDER BY m.id DESC LIMIT 15';
             }
