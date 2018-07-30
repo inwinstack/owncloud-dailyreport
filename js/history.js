@@ -9,7 +9,7 @@ $.ajax({
     // handle success
     if (response.length > 0){
         response.map(function(data){
-            var append_string = "<tr><td>" + data.display_name + "</td>" + "<td>" + data.email + "</td>" +
+            var append_string = "<tr><td>" + data.display_name + "</td>" + "<td>" + (data.email == null ? '' : data.email) + "</td>" +
               "<td>" + Math.round((data.user_usage/1024)*100)/100 + " MB" + "</td>" + 
               "<td>" + Math.round((data.total/1024)*100)/100 + " MB" +"</td>" + 
               "<td>" + data.created_at + "</td></tr>";
